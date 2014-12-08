@@ -25,7 +25,7 @@ void process_pcapfile(char *out, char *filename) {
     char errbuf[PCAP_ERRBUF_SIZE];
     pcap_t *p;
 
-    p = pcap_open_offline(filename, errbuf);
+    p = pcap_open_offline_with_tstamp_precision(filename, PCAP_TSTAMP_PRECISION_NANO, errbuf);
     if (! p) {
         fprintf(stderr, "pcap_open_offline(%s) failed: %s", filename, errbuf);
         return;
