@@ -8,11 +8,11 @@ It will not do anything smart, it opens each pcap file, one at a time, and appen
 ### usage
 
 
-     $ pcap-merge *pcap | tcpdump -nr -
+     $ pcap-merge - *pcap | tcpdump -nr -
 
 ## FAQ
 
-### Q: mergecap can do it! Is it NIH syndrom?
+### Q: mergecap can do it! Is it NIH syndrome?
 
 Nope, it just crashes when you have a *lot* of pcap files to merge.
 
